@@ -39,7 +39,7 @@ class PickuplinesController < ApplicationController
         # session["init"] = true
         pickupline = Pickupline.find(params[:id])
         
-        # byebug
+        byebug
         # user = current_user
 
     
