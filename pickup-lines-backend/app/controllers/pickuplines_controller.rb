@@ -2,7 +2,18 @@ class PickuplinesController < ApplicationController
 
     def index
       pickuplines = Pickupline.all
-      render json: pickuplines.to_json(:include => [:user], :except => [:created_at, :updated_at])
+      serialized = pickuplines.map do |pickupline| 
+        {
+          content: pickupline.content,
+          category: pickupline.category,
+          createdBy: User.find(pickupline.user_id).username,
+          fireLikeCount: pickupline.fire_likes,
+          cryLikeCount: pickupline.cry_likes,
+          seenoevilLikeCount: pickupline.seenoevil_likes,
+          thinkingLikeCount: pickupline.thinking_likes    
+        }
+      end
+      render json: serialized
     end 
 
     def show 

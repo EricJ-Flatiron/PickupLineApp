@@ -4,14 +4,26 @@
     <meta charset="utf-8">
     <title>Pickup Linez</title>
     <link rel="stylesheet" href="styles.css">
-    <script defer src="./src/index.js"></script>
-
+    <script defer src="./src/login.js"></script>
   </head>
   <body>
     <header>
       <h2>Pickup Linez!</h2>
-      <h6><a src='./login.html'>login</a></h6>
+      <h6><a href='./login.html'>login</a></h6>
     </header>
-    <h1>please login</h1>
+    <h1>Login</h1>
+
+    <div class="login-container">
+      <form>
+        <label for="username"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="username" required>
+  
+        <label for="password"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="password" required>
+  
+        <button type="submit">Login</button>
+      </form>
+    </div>
+    <p class='create-account'>Don't have an account?</p>
   </body>
 </html>
