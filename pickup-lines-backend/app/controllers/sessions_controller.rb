@@ -9,7 +9,10 @@ class SessionsController < ApplicationController
         user = User.find_by(username: params[:username])
         
         if user && user.password == params[:password]
+            session["init"] = true
+            
             session[:user_id] = user.id
+            
             render json: {message: 'success'}
         else 
             render json: {message: "error"}

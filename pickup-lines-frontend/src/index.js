@@ -48,13 +48,13 @@ const createFireLike = (pickupline) => {
                 "Content-Type": "application/json",
             },
             body: JSON.stringify({
-                firelikeCount: ++pickupline.firelikeCount
+                fireLikeCount: ++pickupline.fireLikeCount
             })
         };
         fetch(`http://localhost:3000/pickuplines/${pickupline.id}`, options)
         .then(res => res.json())
         .then(pickupline => {
-            p.textContent = `${pickupline.firelikeCount}`;
+            p.textContent = `${pickupline.fireLikeCount}`;
             console.log(pickupline)
         })
 

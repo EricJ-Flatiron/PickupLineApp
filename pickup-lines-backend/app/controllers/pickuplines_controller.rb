@@ -1,5 +1,7 @@
 class PickuplinesController < ApplicationController
 
+
+
     def index
       pickuplines = Pickupline.all
       serialized = pickuplines.map do |pickupline| 
@@ -34,25 +36,25 @@ class PickuplinesController < ApplicationController
     end 
 
     def update
-        session['init'] = true
+        # session["init"] = true
         pickupline = Pickupline.find(params[:id])
         
         # byebug
-        user = current_user
+        # user = current_user
 
-        puts session
-        puts params
+    
         # check to see if user has liked that emoji and that post
         pickupline.likes.each do |like| 
           if like.user_id == session[:user_id]
             if !like.fire
               like.fire = true
               like.save
-              render json: {fireLikeCount: pickupline.fire_likes}
+              
             end
           end
 
         end
+        render json: {fireLikeCount: pickupline.fire_likes}
         # pickupline.fire_likes = params[:fireLikeCount]
         # render json: {
         #     fireLikeCount: pickupline.fire_likes,
