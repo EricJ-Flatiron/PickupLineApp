@@ -7,9 +7,11 @@
 
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
-    origins '*'
+    origins 'https://google.com'
+    # credentials: true,
 
     resource '*',
+      credentials: true,
       headers: :any,
       methods: [:get, :post, :put, :patch, :delete, :options, :head]
   end

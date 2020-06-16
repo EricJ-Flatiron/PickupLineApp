@@ -43,6 +43,7 @@ const createFireLike = (pickupline) => {
     
     firelikeBtn.addEventListener('click', () => {
         const options = {
+            credentials: 'include',
             method: 'PATCH',
             headers: {
                 "Content-Type": "application/json",
