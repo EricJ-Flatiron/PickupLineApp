@@ -8,58 +8,68 @@ const displayPickuplines = (pickuplines) => {
   const div = document.querySelector('.pickuplines');
 
   pickuplines.forEach((pickupline) => {
-    console.log(pickupline)
     const innerDiv = document.createElement("div");
     const content = document.createElement('h5');
     const category = document.createElement('h6');
     const createdBy = document.createElement('p');
 
-    const fireLikeEle = createFireLike(pickupline)
-
-    const fireLikeCount = document.createElement('p');
-    fireLikeCount.className = "fire-like"
-    fireLikeCount.dataset.fireId = `${pickupline.id}`
-    fireLikeCount.textContent = pickupline.fireLikeCount
-
-    // const fireLikeEle = createLike(pickupline.fireLikeCount, pickupline.id)
-  
-
+    const fireLikeEle = createButton(pickupline, pickupline.fireLikeCount, "fire", "../assets/fire.png")
+    const cryLikeEle = createButton(pickupline, pickupline.cryLikeCount, "cry", "../assets/fire.png")
+    const evilLikeEle = createButton(pickupline, pickupline.seenoevilLikeCount, "seenoevil", "../assets/fire.png")
+    const thinkingLikeEle = createButton(pickupline, pickupline.thinkingLikeCount, "thinking", "../assets/fire.png")
 
     content.textContent = pickupline.content
     category.textContent = pickupline.category
     createdBy.textContent = `created by ${pickupline.createdBy}`
     
-    innerDiv.append(content, category, createdBy, fireLikeEle, fireLikeCount)
+    innerDiv.append(content, category, createdBy, fireLikeEle, cryLikeEle, evilLikeEle, thinkingLikeEle)
     div.append(innerDiv);
   });
 }
 
 
 
-const createFireLike = (pickupline) => {
-    const firelikeBtn = document.createElement('img');
-    const p = document.createElement('p');
-    firelikeBtn.src = "./assets/fire/png"
+const createButton = (pickupline, likeCount, buttonType, imgSrc) => {
+    const buttonContainer = document.createElement('div'); 
+    const img = document.createElement('img');
+    img.src = imgSrc
+    const count = document.createElement('p');
+    count.textContent = likeCount
     
-    firelikeBtn.addEventListener('click', () => {
+    img.addEventListener('click', () => {
         const options = {
-            credentials: 'include',
             method: 'PATCH',
             headers: {
                 "Content-Type": "application/json",
             },
             body: JSON.stringify({
-                fireLikeCount: ++pickupline.fireLikeCount
+              buttonType: buttonType
             })
         };
         fetch(`http://localhost:3000/pickuplines/${pickupline.id}`, options)
         .then(res => res.json())
         .then(pickupline => {
-            p.textContent = `${pickupline.fireLikeCount}`;
+            count.textContent = `${pickupline.likeCount}`;
             console.log(pickupline)
         })
 
     })
-    return firelikeBtn
+     
+    buttonContainer.append(img, count)
+    return buttonContainer
     
 }
+
+
+const filterDiv = document.querySelector('header .filter');
+filterDiv.addEventListener('click', (e) => {
+  console.log(e.target)
+  fetch('http://localhost:3000/pickuplines')
+    .then(res => res.json())
+    .then(pickuplines => {
+      pickuplinesFiltered = pickuplines.map(() => {
+        
+      })
+      displayPickuplines(pickuplines)
+    }) 
+})

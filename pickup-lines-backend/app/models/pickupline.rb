@@ -18,4 +18,30 @@ class Pickupline < ApplicationRecord
     def seenoevil_likes
         self.likes.select{|like| like.seenoevil == true}.length
     end
+
+
+    
+    def self.camping_category
+        self.all.select{|p| p.category == "camping"}
+    end
+
+    def self.holiday_category
+        self.all.select{|p| p.category == "holiday"}
+    end
+
+    def self.nerdy_category
+        self.all.select{|p| p.category == "nerdy"}
+    end
+  
+    def self.food_category
+        self.all.select{|p| p.category ==  "food"}
+    end
+
+    def self.music_category
+        self.all.select{|p| p.category ==  "music"}
+    end
+
+    def self.math_category
+        self.all.select{|p| p.category  == "math"}
+    end
 end
