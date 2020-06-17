@@ -1,0 +1,217 @@
+body {
+    padding: 10px
+}
+
+.title-container {
+  display: flex
+}
+
+.title {
+  flex-grow: 1;
+}
+
+.login-create h5 {
+  margin: 10px
+}
+
+.filter {
+  margin: auto;
+  text-align: center;
+}
+
+.filter h4 {
+  display: inline;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+
+}
+
+.card {
+    margin: auto;
+    width: 35%;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding: 10px;
+    border: solid 1px black;
+    border-radius: 20px;
+    box-shadow: 6px 6px 0px green;
+}
+
+.reaction-container {
+    text-align: center;
+}
+
+.button-container {
+    display: inline;
+    padding: 10px;    
+}
+
+.reaction-count {
+  display: inline;
+  padding: 5px
+}
+
+.reaction-img {
+  width: 20px;
+  height: 20px;
+  display: inline;
+}
+
+a.nostyle:link {
+    text-decoration: inherit;
+    color: inherit;
+    cursor: auto;
+}
+
+a.nostyle:visited {
+    text-decoration: inherit;
+    color: inherit;
+    cursor: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+#fireAnimate1 {
+  width: 50px;
+  height: 50px;
+  position: sticky;
+  bottom: -50px;
+}
+#fireAnimate2 {
+  width: 50px;
+  height: 50px;
+  position: sticky;
+  bottom: -50px;
+  left: 200px;
+
+}
+#fireAnimate3 {
+  width: 50px;
+  height: 50px;
+  position: sticky;
+  bottom: -50px;
+  left: 400px;
+
+}
+#fireAnimate4 {
+  width: 50px;
+  height: 50px;
+  position: sticky;
+  top: -1000px;
+  left: 600px;
+}
+#fireAnimate5 {
+  width: 50px;
+  height: 50px;
+  position: sticky;
+  top: -1000px;
+  left: 800px;
+}
+#fireAnimate6 {
+  width: 50px;
+  height: 50px;
+  position: sticky;
+  top: -1000px;
+  left: 1000px;
+}
+
+#fireAnimate7 {
+  width: 50px;
+  height: 50px;
+  position: sticky;
+  top: -1000px;
+  left: 1200px;
+}
+
+#fireAnimate8 {
+  width: 50px;
+  height: 50px;
+  position: sticky;
+  top: -1000px;
+  left: 1400px;
+}
+
+#fireAnimate9 {
+  width: 50px;
+  height: 50px;
+  position: sticky;
+  top: -1000px;
+  left: 1600px;
+}
+
+#cryAnimate1 {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: -50px;
+}
+#cryAnimate2 {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: -50px;
+  left: 200px;
+}
+#cryAnimate3 {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: -50px;
+  left: 400px;
+}
+#cryAnimate4 {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: -50px;
+  left: 600px;
+}
+#cryAnimate5 {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: -50px;
+  left: 800px;
+}
+#cryAnimate6 {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: -50px;
+  left: 800px;
+}
+
+#cryAnimate7 {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: -50px;
+  left: 1000px;
+}
+
+#cryAnimate8 {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: -50px;
+  left: 1200px;
+}
+
+#cryAnimate9 {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: -50px;
+  left: 1400px;
+}
