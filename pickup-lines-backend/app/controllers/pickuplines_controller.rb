@@ -28,7 +28,17 @@ class PickuplinesController < ApplicationController
       seenoevil: false,
       thinking: false
     )
-    render json: {pickupline: pickupline}
+    render json: {
+      id: pickupline.id,
+      category: pickupline.category,
+      content: pickupline.content,
+      createdBy: user.username,
+      fireLikeCount: pickupline.fire_likes,
+      cryLikeCount: pickupline.cry_likes,
+      seenoevilLikeCount: pickupline.seenoevil_likes,
+      thinkingLikeCount: pickupline.thinking_likes      
+    }
+
   end 
 
   def update

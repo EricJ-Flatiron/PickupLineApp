@@ -1,36 +1,33 @@
 fetch('http://localhost:3000/pickuplines')
- .then(res => res.json())
- .then((pickuplines) => displayPickuplines(pickuplines))
+  .then(res => res.json())
+  .then((pickuplines) => {
+    pickuplines.forEach(displayPickupLine)
+  })
 
-const displayPickuplines = (pickuplines) => {
+const displayPickupLine = (pickupline) => {
   const div = document.querySelector('.pickuplines');
-  div.textContent = ''
-  console.log(pickuplines)
-  pickuplines.forEach((pickupline) => {
-    const innerDiv = document.createElement("div");
-    innerDiv.className = "card"
-    const content = document.createElement('h4'); 
-    const category = document.createElement('h5');
-    const createdBy = document.createElement('h5');
+  const innerDiv = document.createElement("div");
+  innerDiv.className = "card"
+  const content = document.createElement('h4'); 
+  const category = document.createElement('h5');
+  const createdBy = document.createElement('h5');
 
-    
-    const reactionContainer = document.createElement('div');
-    reactionContainer.className = "reaction-container";
-    const fireLikeEle = createButton(pickupline, pickupline.fireLikeCount, "fire", "./assets/fire.png")
-    const cryLikeEle = createButton(pickupline, pickupline.cryLikeCount, "cry", "./assets/crying.png")
-    const evilLikeEle = createButton(pickupline, pickupline.seenoevilLikeCount, "seenoevil", "./assets/seenoevil.png")
-    const thinkingLikeEle = createButton(pickupline, pickupline.thinkingLikeCount, "thinking", "./assets/thinking.png")
-    reactionContainer.append(fireLikeEle, cryLikeEle, evilLikeEle, thinkingLikeEle)
-    
-    content.textContent = pickupline.content
-    category.textContent = pickupline.category
-    createdBy.textContent = `created by: ${pickupline.createdBy}`
-    
-    innerDiv.append(content, category, createdBy, reactionContainer)
-    div.append(innerDiv);
-  });
+  
+  const reactionContainer = document.createElement('div');
+  reactionContainer.className = "reaction-container";
+  const fireLikeEle = createButton(pickupline, pickupline.fireLikeCount, "fire", "./assets/fire.png")
+  const cryLikeEle = createButton(pickupline, pickupline.cryLikeCount, "cry", "./assets/crying.png")
+  const evilLikeEle = createButton(pickupline, pickupline.seenoevilLikeCount, "seenoevil", "./assets/seenoevil.png")
+  const thinkingLikeEle = createButton(pickupline, pickupline.thinkingLikeCount, "thinking", "./assets/thinking.png")
+  reactionContainer.append(fireLikeEle, cryLikeEle, evilLikeEle, thinkingLikeEle)
+  
+  content.textContent = pickupline.content
+  category.textContent = `category: ${pickupline.category}`
+  createdBy.textContent = `created by: ${pickupline.createdBy}`
+  
+  innerDiv.append(content, category, createdBy, reactionContainer)
+  div.append(innerDiv);
 }
-
 
 
 const createButton = (pickupline, likeCount, buttonType, imgSrc) => {
@@ -89,7 +86,9 @@ filterDiv.addEventListener('click', (e) => {
       })
       console.log(pickuplinesFiltered)
       if (pickuplinesFiltered.length > 0) {
-        displayPickuplines(pickuplinesFiltered)
+        const div = document.querySelector('.pickuplines');
+        div.textContent = ''
+        pickuplinesFiltered.forEach(displayPickupLine)
       }
     }) 
 })

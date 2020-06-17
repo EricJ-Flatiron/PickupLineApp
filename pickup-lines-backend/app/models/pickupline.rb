@@ -44,4 +44,11 @@ class Pickupline < ApplicationRecord
     def self.math_category
         self.all.select{|p| p.category  == "math"}
     end
+
+    def self.user_created 
+        user = User.find_by(username: "BobXOXO")
+        self.all.select{|p| p.user_id == user.id}
+    end
+    
 end
+

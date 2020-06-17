@@ -4,8 +4,9 @@
     <meta charset="utf-8">
     <title>Pickup Linez</title>
     <link rel="stylesheet" href="styles.css">
+    <script defer src="./src/route.js"></script>
+    <script defer src="./src/createPickupline.js"></script>
     <script defer src="./src/index.js"></script>
-
   </head>
   <body>
     <header>
@@ -13,7 +14,7 @@
         <h2 class="title">Pickup Linez!</h2>
         <div class="login-create">
           <h6><a href='./login.html'>login</a></h6>
-          <h6><a href='./create_pickupline.html'>Create a Pickupline</a></h6>
+          <h6 id="create-pickupline-button">Create a Pickupline</h6>
         </div>
       </div>
       <div class="filter">
@@ -65,6 +66,29 @@
       <img src="./assets/crying.png" width="50" height="50">
     </div>
 
+ 
+    <div class="create-pickupline-container">
+      <h1>Create Pickupline</h1>
+      <form id="pickupline-form">
+        
+        <label for="category">Choose a Category:</label>
+        <select name="category" id="category" form="carform">
+          <option value="nerdy">Nerdy</option>
+          <option value="food">Food</option>
+          <option value="music">Music</option>
+          <option value="math">Math</option>
+          <option value="camping">Camping</option>
+          <option value="holiday">Holiday</option>
+
+        </select> 
+  
+        <label for="content"><b>Content</b></label>
+        <input type="content" placeholder="Enter Content" name="content" required>
+  
+        <button type="submit">Create Pickupline</button>
+      </form>
+    </div>
+    
     <div class="pickuplines">
       <!-- show pickuplines -->
       

@@ -27,6 +27,10 @@ body {
 
 }
 
+.create-pickupline-container {
+    visibility: hidden;
+}
+
 .card {
     margin: auto;
     width: 35%;

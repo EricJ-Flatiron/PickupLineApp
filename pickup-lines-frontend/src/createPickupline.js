@@ -1,5 +1,5 @@
-const createPickuplineContainer = document.querySelector('.create-pickupline-container form')
-createPickuplineContainer.addEventListener('submit', (e) => {
+const createPickuplineContainerForm = document.querySelector('.create-pickupline-container form')
+createPickuplineContainerForm.addEventListener('submit', (e) => {
   e.preventDefault();
 
   const category = document.querySelector("#category").value
@@ -16,8 +16,10 @@ createPickuplineContainer.addEventListener('submit', (e) => {
     })
   })
   .then(res => res.json())
-  .then(json => {
-    console.log(json)
+  .then(pickupline => {
+    console.log(pickupline)
+    createPickuplineDiv.style.visibility = "hidden"
+    displayPickupLine(pickupline)
     // window.location.href = './index.html'
   })
 })
