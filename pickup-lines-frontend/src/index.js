@@ -39,7 +39,7 @@ const displayPickuplines = (pickuplines) => {
 const createFireLike = (pickupline) => {
     const firelikeBtn = document.createElement('img');
     const p = document.createElement('p');
-    firelikeBtn.src = "./assets/fire/png"
+    firelikeBtn.src = "./assets/fire.png"
     
     firelikeBtn.addEventListener('click', () => {
         const options = {
@@ -62,4 +62,35 @@ const createFireLike = (pickupline) => {
     })
     return firelikeBtn
     
+}
+
+function fireMove() {
+    let elem1 = document.getElementById("fireAnimate1"); 
+    let elem2 = document.getElementById("fireAnimate2");
+    let elem3 = document.getElementById("fireAnimate3");
+    let elem4 = document.getElementById("fireAnimate4");
+    let elem5 = document.getElementById("fireAnimate5");
+    let elem6 = document.getElementById("fireAnimate6");  
+    let elem7 = document.getElementById("fireAnimate7");
+    let elem8 = document.getElementById("fireAnimate8");
+    let elem9 = document.getElementById("fireAnimate9");
+    let pos = 1300;
+    let id = setInterval(frame, 2);
+    function frame() {
+      if (pos == -300) {
+        clearInterval(id);
+      } else {
+        pos -= 2; 
+        elem1.style.top = pos + 'px'; 
+        elem2.style.top = pos + 'px'; 
+        elem3.style.top = pos + 'px'; 
+        elem4.style.top = pos + 'px'; 
+        elem5.style.top = pos + 'px'; 
+        elem6.style.top = pos + 'px'; 
+        elem7.style.top = pos + 'px';
+        elem8.style.top = pos + 'px';
+        elem9.style.top = pos + 'px';
+        // elem.style.left = pos + 'px'; 
+      }
+    }
 }
