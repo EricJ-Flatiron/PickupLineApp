@@ -23,3 +23,21 @@ Create Basic HTML structures
 Establish Fetch responses for pickuplines and likes
 
 Wednesday: Styling and Animation# PickupLineApp
+
+
+----------------------------------------
+
+style
+  - login 
+  - create pickupline
+
+Animations
+
+create a user
+
+option 1 
+  - edit a user
+
+option 2 
+  - allow user to delete their pickuplines 
+
