@@ -11,7 +11,8 @@ class PickuplinesController < ApplicationController
         fireLikeCount: pickupline.fire_likes,
         cryLikeCount: pickupline.cry_likes,
         seenoevilLikeCount: pickupline.seenoevil_likes,
-        thinkingLikeCount: pickupline.thinking_likes    
+        thinkingLikeCount: pickupline.thinking_likes, 
+        crispyLikeCount: pickupline.crispy_likes
       }
     end
     render json: serialized
@@ -26,7 +27,8 @@ class PickuplinesController < ApplicationController
       fire: false,
       cry: false,
       seenoevil: false,
-      thinking: false
+      thinking: false,
+      crispy: false
     )
     render json: {
       id: pickupline.id,
@@ -36,7 +38,8 @@ class PickuplinesController < ApplicationController
       fireLikeCount: pickupline.fire_likes,
       cryLikeCount: pickupline.cry_likes,
       seenoevilLikeCount: pickupline.seenoevil_likes,
-      thinkingLikeCount: pickupline.thinking_likes      
+      thinkingLikeCount: pickupline.thinking_likes,
+      crispyLikeCount: pickupline.crispy_likes     
     }
 
   end 
@@ -77,6 +80,16 @@ class PickuplinesController < ApplicationController
             like.save
           end
           likeCount = pickupline.seenoevil_likes
+
+        when 'crispy'
+          if !like.crispy
+            like.crispy = true
+            like.save
+          else
+            like.crispy = false
+            like.save
+          end
+          likeCount = pickupline.crispy_likes
         
         when 'thinking'
           if !like.thinking
@@ -91,5 +104,11 @@ class PickuplinesController < ApplicationController
       end
     end
     render json: {likeCount: likeCount}
+  end
+
+  def destroy 
+    p = Pickupline.find(params[:id])
+    p.destroy
+    render json: {message: "deleted"}
   end
 end

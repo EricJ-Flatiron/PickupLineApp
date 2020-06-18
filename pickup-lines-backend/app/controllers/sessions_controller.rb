@@ -6,17 +6,9 @@ class SessionsController < ApplicationController
     end
 
     def create
-        user = User.find_by(username: params[:username])
-        
-        if user && user.password == params[:password]
-            session["init"] = true
-            
-            session[:user_id] = user.id
-            
-            render json: {message: 'success'}
-        else 
-            render json: {message: "error"}
-        end
+      user = User.new(username: params[:username], password: [:password])
+      user.save
+      render json: user
     end
 
     def destroy

@@ -7,66 +7,43 @@
     <script defer src="./src/route.js"></script>
     <script defer src="./src/createPickupline.js"></script>
     <script defer src="./src/index.js"></script>
+    <script defer src="./src/showUser.js"></script>
   </head>
   <body>
     <header>
       <div class="title-container">
-        <h2 class="title">Pickup Linez!</h2>
+        <h1 class="title">Pickup Linez!</h1>
         <div class="login-create">
-          <h6><a href='./login.html'>login</a></h6>
-          <h6 id="create-pickupline-button">Create a Pickupline</h6>
+          <button><a href='./login.html'>login</a></button><br>
+          <button id="myBtn">My Account</button><br>
+          
+          <button id="create-pickupline-button">Create a Pickupline</button>
         </div>
       </div>
       <div class="filter">
-        <h4 id="nerdy">Nerdy</h4>
-        <h4 id="food">Food</h4>
-        <h4 id="music">Music</h4>
-        <h4 id="math">Math</h4>
-        <h4 id="camping">Camping</h4>
-        <h4 id="holiday">Holiday</h4>
+        <button id="nerdy">Nerdy</button>
+        <button id="food">Food</button>
+        <button id="music">Music</button>
+        <button id="math">Math</button>
+        <button id="camping">Camping</button>
+        <button id="holiday">Holiday</button>
       </div>
  
     </header>
      
+    <div id="myModal" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="user-content">
+          
+        </div>
+      </div>
     
-
-    <div id = "cryAnimate1">
-      <img src="./assets/crying.png" width="50" height="50">
     </div>  
 
-    <div id = "cryAnimate2">
-      <img src="./assets/crying.png" width="50" height="50">
-    </div>  
 
-    <div id = "cryAnimate3">
-      <img src="./assets/crying.png" width="50" height="50">
-    </div>  
-
-    <div id = "cryAnimate4">
-      <img src="./assets/crying.png" width="50" height="50">
-    </div>  
-
-    <div id = "cryAnimate5">
-      <img src="./assets/crying.png" width="50" height="50">
-    </div>  
-    
-    <div id = "cryAnimate6">
-      <img src="./assets/crying.png" width="50" height="50">
-    </div>  
-
-    <div id = "cryAnimate7">
-      <img src="./assets/crying.png" width="50" height="50">
-    </div> 
-
-    <div id = "cryAnimate8">
-      <img src="./assets/crying.png" width="50" height="50">
-    </div> 
-
-    <div id = "cryAnimate9">
-      <img src="./assets/crying.png" width="50" height="50">
-    </div>
-
- 
     <div class="create-pickupline-container">
       <h1>Create Pickupline</h1>
       <form id="pickupline-form">
@@ -95,42 +72,5 @@
     </div>
 
   </body>
-  <!--
-
-  <div id = "fireAnimate1">
-    <img src="./assets/fire.png" width="50" height="50">
-  </div>  
-
-  <div id = "fireAnimate2">
-    <img src="./assets/fire.png" width="50" height="50">
-  </div>  
-
-  <div id = "fireAnimate3">
-    <img src="./assets/fire.png" width="50" height="50">
-  </div>  
-
-  <div id = "fireAnimate4">
-    <img src="./assets/fire.png" width="50" height="50">
-  </div>  
-
-  <div id = "fireAnimate5">
-    <img src="./assets/fire.png" width="50" height="50">
-  </div>  
   
-  <div id = "fireAnimate6">
-    <img src="./assets/fire.png" width="50" height="50">
-  </div>  
-
-  <div id = "fireAnimate7">
-    <img src="./assets/fire.png" width="50" height="50">
-  </div> 
-
-  <div id = "fireAnimate8">
-    <img src="./assets/fire.png" width="50" height="50">
-  </div> 
-
-  <div id = "fireAnimate9">
-    <img src="./assets/fire.png" width="50" height="50">
-  </div> 
-  -->
 </html>

@@ -22,15 +22,16 @@ u10 = User.create(username: "ReadyBaby", password: "123", profile_picture: "")
 u11 = User.create(username: "SincereHot", password: "123", profile_picture: "")
 
 
-
+ 
+@users = [u2, u3, u4, u5, u6, u7, u8, u9, u10, u11]
 def ru  #return random user
-    return User.all.sample
+    return @users.sample
 end
 
 
 p1 = Pickupline.create(content: "Are you a computer keyboard? Because you're my type.", category: "nerdy", user_id: ru.id)
 p2 = Pickupline.create(content: "A life without you, would be like a computer without an OS.", category: "nerdy", user_id: ru.id)
-p3 = Pickupline.create(content: "Are you sitting on the F5 key? Cause your ass is refreshing.", category: "nerdy", user_id: ru.id)
+p3 = Pickupline.create(content: "Are you sitting on the F5 key? Cause your ass is refreshing.", category: "nerdy", user_id: u1.id)
 p4 = Pickupline.create(content: "Baby, if they made you in Java, you'd be the object of my desire.", category: "nerdy", user_id: ru.id)
 p5 = Pickupline.create(content: "Before you, I was a PC without a power outlet.", category: "nerdy", user_id: ru.id)
 p6 = Pickupline.create(content: "Do u like me? Text '1′ for 'Yes,' '2′ for 'No.", category: "nerdy", user_id: ru.id)
@@ -47,7 +48,7 @@ p18 = Pickupline.create(content: "You make me melt like hot fudge on a sundae.",
 p19 = Pickupline.create(content: "You must be a banana because I find you very a-peeling.", category: "food", user_id: ru.id)
 
 p21 = Pickupline.create(content: "Are you Shakira, cuz those hips don't lie.", category: "music", user_id: ru.id)
-p22 = Pickupline.create(content: "Are you Stacy's mom? Cause you've got it going on.", category: "music", user_id: ru.id)
+p22 = Pickupline.create(content: "Are you Stacy's mom? Cause you've got it going on.", category: "music", user_id: u1.id)
 p23 = Pickupline.create(content: "You had me at cello. Let's cut to the chase and duet already.", category: "music", user_id: ru.id)
 p24 = Pickupline.create(content: "Your voice is so a-do-re-ble to mi.", category: "music", user_id: ru.id)
 p25 = Pickupline.create(content: "Do your parents compose classical music, cause baby got Bach. ", category: "music", user_id: ru.id)
@@ -91,7 +92,8 @@ User.all.each { |u|
             fire: randB,
             cry: randB, 
             seenoevil: randB, 
-            thinking: randB
+            thinking: randB,
+            crispy: randB
         )
     }   
 }

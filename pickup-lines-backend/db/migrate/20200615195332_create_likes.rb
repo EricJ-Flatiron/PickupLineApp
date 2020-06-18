@@ -5,6 +5,7 @@ class CreateLikes < ActiveRecord::Migration[6.0]
       t.boolean :cry
       t.boolean :seenoevil
       t.boolean :thinking
+      t.boolean :crispy
       t.integer :user_id
       t.integer :pickupline_id
 

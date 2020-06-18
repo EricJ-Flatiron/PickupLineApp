@@ -27,7 +27,7 @@ Wednesday: Styling and Animation# PickupLineApp
 
 ----------------------------------------
 
-style
+style - DONE
   - login 
   - create pickupline
 

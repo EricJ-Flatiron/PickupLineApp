@@ -1,5 +1,8 @@
 body {
-    padding: 10px
+  padding: 10px;
+  background-color: background-color: #b8c6db;
+  background-image: linear-gradient(315deg, #b8c6db 0%, #f5f7fa 50%);
+  position: sticky;
 }
 
 .title-container {
@@ -8,6 +11,39 @@ body {
 
 .title {
   flex-grow: 1;
+  text-align: center;
+  text-shadow: 2px 2px 5px #89B9FB;
+  font-family: "Lucida Console", Courier, monospace;
+  font-size: 40px;
+}
+
+.login-title {
+  text-align: center;
+  text-shadow: 2px 2px 5px #89B9FB;
+  font-family: "Lucida Console", Courier, monospace;
+  font-size: 50px;
+  padding: 35px;
+}
+
+.please-login {
+  text-align: center;
+  font-family: "Lucida Console", Courier, monospace;
+  font-size: 35px;
+  padding: 20px;
+  color: #89B9FB;
+  /* text-shadow: 2px 2px black; */
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black
+}
+.create-account-container{
+  text-align:center;
+}
+
+.login-container {
+  text-align:center;
+}
+
+.create-account {
+  text-align: center;
 }
 
 .login-create h5 {
@@ -39,7 +75,9 @@ body {
     padding: 10px;
     border: solid 1px black;
     border-radius: 20px;
-    box-shadow: 6px 6px 0px green;
+    box-shadow: 6px 6px 0px #89B9FB;
+    background-color: #E6E6FA;
+    /* #E6E6FA;  #89B9FB*, eeeef8;*/
 }
 
 .reaction-container {
@@ -73,14 +111,62 @@ a.nostyle:visited {
     color: inherit;
     cursor: auto;
 }
+.create-pickupline-container button{ /*submit create pickupline button */
+  background-color: white;
+  color: black;
+  border: 2px solid #89B9FB; 
+  padding: 5px 8px;
+  text-align: center;
+  display: inline-block;
+  font-size: 10px;
+  border-radius: 12px;  
+  box-shadow: 1px 1px 0px #89B9FB;
+}
+.login-create button { /*buttons in top right corner */
+  background-color: white;
+  color: black;
+  border: 2px solid #89B9FB; 
+  padding: 5px 8px;
+  text-align: center;
+  display: inline-block;
+  font-size: 10px;
+  border-radius: 12px;  
+  box-shadow: 1px 1px 0px #89B9FB;
+}
+button {
+    background-color: white;
+    color: black;
+    border: 2px solid #89B9FB; 
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: bold;
+    display: inline-block;
+    font-size: 15px;
+    border-radius: 12px;  
+    cursor: pointer;
+    box-shadow: 3px 3px 0px #89B9FB;
+}
 
 
+button:hover {
+  background-color: #89B9FB; 
+  color: white
+}
+
+button:active {
+  background-color: #89B9FB;
+  box-shadow: 3px 3px 0px #89B9FB;
+  transform: translateY(4px);
+}
 
 
-
-
-
-
+h1{     /* create a comment title*/
+  flex-grow: 1;
+  text-align: left;
+  text-shadow: 2px 2px 5px #89B9FB;
+  font-family: "Lucida Console", Courier, monospace;
+  font-size: 30px;
+}
 
 
 
@@ -154,68 +240,317 @@ a.nostyle:visited {
   left: 1600px;
 }
 
-#cryAnimate1 {
+#seenoevilAnimate1 {
   width: 50px;
   height: 50px;
-  position: absolute;
-  top: -50px;
-}
-#cryAnimate2 {
-  width: 50px;
-  height: 50px;
-  position: absolute;
-  top: -50px;
-  left: 200px;
-}
-#cryAnimate3 {
-  width: 50px;
-  height: 50px;
-  position: absolute;
-  top: -50px;
-  left: 400px;
-}
-#cryAnimate4 {
-  width: 50px;
-  height: 50px;
-  position: absolute;
-  top: -50px;
-  left: 600px;
-}
-#cryAnimate5 {
-  width: 50px;
-  height: 50px;
-  position: absolute;
-  top: -50px;
-  left: 800px;
-}
-#cryAnimate6 {
-  width: 50px;
-  height: 50px;
-  position: absolute;
-  top: -50px;
-  left: 800px;
+  position: sticky;
+  bottom: -50px;
 }
 
-#cryAnimate7 {
+#seenoevilAnimate2 {
   width: 50px;
   height: 50px;
-  position: absolute;
-  top: -50px;
+  position: sticky;
+  bottom: -50px;
+  left: 200px;
+}
+
+#seenoevilAnimate3 {
+  width: 50px;
+  height: 50px;
+  position: sticky;
+  bottom: -50px;
+  left: 400px;
+
+}
+#seenoevilAnimate4 {
+  width: 50px;
+  height: 50px;
+  position: sticky;
+  top: -1000px;
+  left: 600px;
+}
+#seenoevilAnimate5 {
+  width: 50px;
+  height: 50px;
+  position: sticky;
+  top: -1000px;
+  left: 800px;
+}
+#seenoevilAnimate6 {
+  width: 50px;
+  height: 50px;
+  position: sticky;
+  top: -1000px;
   left: 1000px;
 }
 
-#cryAnimate8 {
+#seenoevilAnimate7 {
   width: 50px;
   height: 50px;
-  position: absolute;
-  top: -50px;
+  position: sticky;
+  top: -1000px;
   left: 1200px;
 }
 
-#cryAnimate9 {
+#seenoevilAnimate8 {
   width: 50px;
   height: 50px;
-  position: absolute;
-  top: -50px;
+  position: sticky;
+  top: -1000px;
   left: 1400px;
+}
+
+#seenoevilAnimate9 {
+  width: 50px;
+  height: 50px;
+  position: sticky;
+  top: -1000px;
+  left: 1600px;
+}
+
+
+#crispyAnimate1 {
+  width: 50px;
+  height: 50px;
+  position: sticky;
+  bottom: -50px;
+}
+#crispyAnimate2 {
+  width: 100px;
+  height: 100px;
+  position: sticky;
+  bottom: -50px;
+  left: 200px;
+
+}
+#crispyAnimate3 {
+  width: 50px;
+  height: 50px;
+  position: sticky;
+  bottom: -50px;
+  left: 400px;
+
+}
+#crispyAnimate4 {
+  width: 100px;
+  height: 100px;
+  position: sticky;
+  top: -1000px;
+  left: 600px;
+}
+#crispyAnimate5 {
+  width: 50px;
+  height: 50px;
+  position: sticky;
+  top: -1000px;
+  left: 800px;
+}
+#crispyAnimate6 {
+  width: 100px;
+  height: 100px;
+  position: sticky;
+  top: -1000px;
+  left: 1000px;
+}
+
+#crispyAnimate7 {
+  width: 50px;
+  height: 50px;
+  position: sticky;
+  top: -1000px;
+  left: 1200px;
+}
+
+#crispyAnimate8 {
+  width: 100px;
+  height: 100px;
+  position: sticky;
+  top: -1000px;
+  left: 1400px;
+}
+
+#crispyAnimate9 {
+  width: 50px;
+  height: 50px;
+  position: sticky;
+  top: -1000px;
+  left: 1600px;
+}
+
+
+#thinkingAnimate1 {
+  width: 50px;
+  height: 50px;
+  position: sticky;
+  bottom: -50px;
+}
+#thinkingAnimate2 {
+  width: 50px;
+  height: 50px;
+  position: sticky;
+  bottom: -50px;
+  left: 200px;
+
+}
+#thinkingAnimate3 {
+  width: 50px;
+  height: 50px;
+  position: sticky;
+  bottom: -50px;
+  left: 400px;
+
+}
+#thinkingAnimate4 {
+  width: 50px;
+  height: 50px;
+  position: sticky;
+  top: -1000px;
+  left: 600px;
+}
+#thinkingAnimate5 {
+  width: 50px;
+  height: 50px;
+  position: sticky;
+  top: -1000px;
+  left: 800px;
+}
+#thinkingAnimate6 {
+  width: 50px;
+  height: 50px;
+  position: sticky;
+  top: -1000px;
+  left: 1000px;
+}
+
+#thinkingAnimate7 {
+  width: 50px;
+  height: 50px;
+  position: sticky;
+  top: -1000px;
+  left: 1200px;
+}
+
+#thinkingAnimate8 {
+  width: 50px;
+  height: 50px;
+  position: sticky;
+  top: -1000px;
+  left: 1400px;
+}
+
+#thinkingAnimate9 {
+  width: 50px;
+  height: 50px;
+  position: sticky;
+  top: -1000px;
+  left: 1600px;
+}
+
+
+#cryingAnimate1 {
+  width: 50px;
+  height: 50px;
+  position: sticky;
+  bottom: -50px;
+}
+#cryingAnimate2 {
+  width: 50px;
+  height: 50px;
+  position: sticky;
+  bottom: -50px;
+  left: 200px;
+
+}
+#cryingAnimate3 {
+  width: 50px;
+  height: 50px;
+  position: sticky;
+  bottom: -50px;
+  left: 400px;
+
+}
+#cryingAnimate4 {
+  width: 50px;
+  height: 50px;
+  position: sticky;
+  top: -1000px;
+  left: 600px;
+}
+#cryingAnimate5 {
+  width: 50px;
+  height: 50px;
+  position: sticky;
+  top: -1000px;
+  left: 800px;
+}
+#cryingAnimate6 {
+  width: 50px;
+  height: 50px;
+  position: sticky;
+  top: -1000px;
+  left: 1000px;
+}
+
+#cryingAnimate7 {
+  width: 50px;
+  height: 50px;
+  position: sticky;
+  top: -1000px;
+  left: 1200px;
+}
+
+#cryingAnimate8 {
+  width: 50px;
+  height: 50px;
+  position: sticky;
+  top: -1000px;
+  left: 1400px;
+}
+
+#cryingAnimate9 {
+  width: 50px;
+  height: 50px;
+  position: sticky;
+  top: -1000px;
+  left: 1600px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
 }

@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(version: 2020_06_15_195655) do
     t.boolean "cry"
     t.boolean "seenoevil"
     t.boolean "thinking"
+    t.boolean "crispy"
     t.integer "user_id"
     t.integer "pickupline_id"
     t.datetime "created_at", precision: 6, null: false

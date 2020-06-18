@@ -19,6 +19,9 @@ class Pickupline < ApplicationRecord
         self.likes.select{|like| like.seenoevil == true}.length
     end
 
+    def crispy_likes
+        self.likes.select{|like| like.crispy == true}.length
+    end
 
     
     def self.camping_category
