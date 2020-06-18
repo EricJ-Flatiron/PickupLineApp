@@ -5,6 +5,11 @@ body {
   position: sticky;
 }
 
+.bob-name {
+  text-align: center;
+  font-size: 30px;
+}
+
 .title-container {
   display: flex
 }
@@ -133,6 +138,22 @@ a.nostyle:visited {
   border-radius: 12px;  
   box-shadow: 1px 1px 0px #89B9FB;
 }
+
+.delete-button{ /*buttons in my account */
+  background-color: white;
+  color: black;
+  border: 2px solid #89B9FB; 
+  padding: 5px 8px;
+  text-align: center;
+  display: inline-block;
+  font-size: 10px;
+  border-radius: 12px;  
+  box-shadow: 1px 1px 0px #89B9FB;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+
 button {
     background-color: white;
     color: black;

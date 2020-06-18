@@ -28,6 +28,7 @@ const userContentDiv = document.querySelector('.user-content');
 const userNameEle = document.createElement('h5')
 userContentDiv.append(userNameEle)
 userNameEle.textContent = "BobXOXO"
+userNameEle.className = "bob-name"
 fetch('http://localhost:3000/pickuplines')
   .then(res => res.json())
   .then(pickuplines => {
@@ -68,7 +69,8 @@ fetch('http://localhost:3000/pickuplines')
 
 
 const createDeleteButton = (pickupline) => {
-    const deleteBtn = document.createElement('btn');
+    const deleteBtn = document.createElement('button');
+    deleteBtn.className = "delete-button"
     deleteBtn.textContent = "Delete this pickupline"
     deleteBtn.addEventListener('click', () => {
       fetch(`http://localhost:3000/pickuplines/${pickupline.id}`, {
